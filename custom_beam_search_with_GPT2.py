@@ -13,7 +13,7 @@ model = AutoModelForCausalLM.from_pretrained("gpt2")
 def set_scores_to_inf_for_banned_tokens(scores, banned_tokens):
     """
     Modifies the scores in place by setting the banned token positions to `-inf`. Banned token is expected to be a
-    list of list of banned tokens to ban in the format [[batch index, vocabulary position],...
+    list of list of banned tokens to ban in tlhe format [[batch index, vocabulary position],...
 
     Args:
         scores: logits distribution of shape (batch size, vocabulary size)
